@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Technical Creations LLC</title>
+    <meta name="description"
+        content="Book a free 30-minute strategy call with Technical Creations LLC and get a custom roadmap for your business." />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Three.js and GSAP for Intro -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- 3D BAGEL INTRO -->
+    <div id="intro-container">
+        <div id="intro-instruction">Click the Bagel to Enter</div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="contact.html" class="nav-link cta-link active">Book a Call</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger"
+                aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-hero">
+        <div class="container">
+            <p class="section-tag">Let's Talk</p>
+            <h1>Book a Free<br /><span class="grad-text">Strategy Call</span></h1>
+            <p>30 minutes. No sales pressure. Just an honest conversation about what your business needs to grow.</p>
+        </div>
+    </section>
+
+    <section class="section contact-section">
+        <div class="container">
+            <div class="contact-layout">
+
+                <!-- FORM -->
+                <div class="contact-form-wrap glass-card">
+                    <h2>Send Us a Message</h2>
+                    <p class="form-sub">We reply within 24 hours on business days.</p>
+                    <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Smith" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Name</label>
+                            <input type="text" id="business" name="business" placeholder="Your Company LLC" />
+                        </div>
+                        <div class="form-group">
+                            <label for="services">Services You're Interested In</label>
+                            <select id="services" name="services">
+                                <option value="">Select a service...</option>
+                                <option>AI Agents</option>
+                                <option>Custom Website</option>
+                                <option>Social Media Systems</option>
+                                <option>Ad Campaigns</option>
+                                <option>Phone Systems</option>
+                                <option>Multiple Services / Full Package</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Business</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="What does your business do? What's the biggest challenge you're facing right now?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            Send Message →
+                        </button>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="success-icon">✅</div>
+                        <h3>Message Sent!</h3>
+                        <p>We'll be in touch within 24 hours to schedule your strategy call.</p>
+                    </div>
+                </div>
+
+                <!-- CONTACT INFO -->
+                <div class="contact-info">
+                    <div class="glass-card info-card">
+                        <div class="info-icon">📧</div>
+                        <h4>Email Us</h4>
+                        <a href="mailto:hello@technicalcreations.com">hello@technicalcreations.com</a>
+                    </div>
+                    <div class="glass-card info-card">
+                        <div class="info-icon">📞</div>
+                        <h4>Call Us</h4>
+                        <a href="tel:5550000000">(555) 000-0000</a>
+                    </div>
+                    <div class="glass-card info-card">
+                        <div class="info-icon">⏰</div>
+                        <h4>Response Time</h4>
+                        <p>Within 24 hours, Monday–Friday</p>
+                    </div>
+
+                    <div class="guarantee-box glass-card">
+                        <h3>What to Expect</h3>
+                        <ul class="expect-list">
+                            <li>
+                                <div class="expect-num grad-text">01</div>
+                                <div>
+                                    <strong>Submit this form</strong>
+                                    <p>Takes less than 2 minutes</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-num grad-text">02</div>
+                                <div>
+                                    <strong>We reach out within 24hrs</strong>
+                                    <p>To schedule your free call</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-num grad-text">03</div>
+                                <div>
+                                    <strong>30-min strategy session</strong>
+                                    <p>We build your custom roadmap</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-num grad-text">04</div>
+                                <div>
+                                    <strong>Receive your proposal</strong>
+                                    <p>Priced and scoped to your goals</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"> <a href="index.html" class="nav-logo">
+                        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+                    </a>
+                    <p>Your business, fully equipped.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#ai-agents">AI Agents</a></li>
+                        <li><a href="services.html#websites">Websites</a></li>
+                        <li><a href="services.html#social-media">Social Media</a></li>
+                        <li><a href="services.html#ads">Ad Campaigns</a></li>
+                        <li><a href="services.html#phone-systems">Phone Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>📧 hello@technicalcreations.com</p>
+                    <p>📞 (555) 000-0000</p>
+                    <div class="social-links"><a href="#" class="social-btn">in</a><a href="#"
+                            class="social-btn">𝕏</a><a href="#" class="social-btn">ig</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Technical Creations LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            setTimeout(() => {
+                document.getElementById('contactForm').style.display = 'none';
+                document.getElementById('formSuccess').style.display = 'flex';
+            }, 1200);
+        }
+    </script>
+    <script src="js/intro.js"></script>
+</body>
+
+</html>

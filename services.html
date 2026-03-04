@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services – Technical Creations LLC</title>
+    <meta name="description"
+        content="AI agents, custom websites, social media systems, ad campaigns, and phone automation built for businesses that want to scale." />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/services.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Three.js and GSAP for Intro -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- 3D BAGEL INTRO -->
+    <div id="intro-container">
+        <div id="intro-instruction">Click the Bagel to Enter</div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link active">Services</a></li>
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <p class="section-tag">What We Offer</p>
+            <h1>Full-Stack Digital<br /><span class="grad-text">Infrastructure</span></h1>
+            <p>Every service we offer is engineered to automate, convert, and scale your business — not just look good.
+            </p>
+        </div>
+    </section>
+
+    <!-- AI AGENTS -->
+    <section class="section service-section" id="ai-agents">
+        <div class="container">
+            <div class="svc-block">
+                <div class="svc-icon-wrap">🤖</div>
+                <div class="svc-content">
+                    <div class="svc-tag">Service 01</div>
+                    <h2 class="svc-title">AI <span class="grad-text">Agents</span></h2>
+                    <p class="svc-desc">We build custom-trained AI agents that handle the repetitive, time-consuming
+                        tasks that drain your team's energy. From customer service to lead qualification, our agents
+                        work 24/7 without a paycheck.</p>
+                    <ul class="svc-features">
+                        <li>✦ Conversational customer support bots</li>
+                        <li>✦ Automated lead qualification & follow-up</li>
+                        <li>✦ CRM integration and data entry automation</li>
+                        <li>✦ Custom-trained on your business knowledge base</li>
+                        <li>✦ Multi-channel: website, email, SMS, WhatsApp</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Get an AI Agent →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEBSITES -->
+    <section class="section service-section alt-bg" id="websites">
+        <div class="container">
+            <div class="svc-block reverse">
+                <div class="svc-icon-wrap">🌐</div>
+                <div class="svc-content">
+                    <div class="svc-tag">Service 02</div>
+                    <h2 class="svc-title">Custom <span class="grad-text">Websites</span></h2>
+                    <p class="svc-desc">Cookie-cutter templates don't win customers. We build conversion-optimized
+                        websites from scratch — designed to rank, load fast, and turn visitors into leads.</p>
+                    <ul class="svc-features">
+                        <li>✦ Full custom design (no templates)</li>
+                        <li>✦ SEO-optimized from day one</li>
+                        <li>✦ Blazing-fast performance (Core Web Vitals)</li>
+                        <li>✦ Conversion-focused layouts and CTAs</li>
+                        <li>✦ CMS integration for easy content updates</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Build My Website →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL MEDIA -->
+    <section class="section service-section" id="social-media">
+        <div class="container">
+            <div class="svc-block">
+                <div class="svc-icon-wrap">📱</div>
+                <div class="svc-content">
+                    <div class="svc-tag">Service 03</div>
+                    <h2 class="svc-title">Social Media <span class="grad-text">Systems</span></h2>
+                    <p class="svc-desc">We don't just post content — we build an automated social media engine that
+                        keeps your brand active, grows your audience, and drives traffic without you lifting a finger.
+                    </p>
+                    <ul class="svc-features">
+                        <li>✦ Content strategy and calendar planning</li>
+                        <li>✦ Automated publishing across all platforms</li>
+                        <li>✦ Branded graphics and short-form video</li>
+                        <li>✦ Engagement automation and community management</li>
+                        <li>✦ Analytics and monthly performance reports</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Automate My Social →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADS -->
+    <section class="section service-section alt-bg" id="ads">
+        <div class="container">
+            <div class="svc-block reverse">
+                <div class="svc-icon-wrap">🎯</div>
+                <div class="svc-content">
+                    <div class="svc-tag">Service 04</div>
+                    <h2 class="svc-title">Ad <span class="grad-text">Campaigns</span></h2>
+                    <p class="svc-desc">We run paid advertising that actually makes money. Our data-driven approach
+                        ensures every dollar you spend is working toward acquiring customers at the lowest cost
+                        possible.</p>
+                    <ul class="svc-features">
+                        <li>✦ Google Search & Display ads</li>
+                        <li>✦ Meta (Facebook & Instagram) ads</li>
+                        <li>✦ Full campaign setup, creative, and copywriting</li>
+                        <li>✦ A/B testing and continuous optimization</li>
+                        <li>✦ Weekly ROAS reporting and strategy calls</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Run My Ads →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHONE SYSTEMS -->
+    <section class="section service-section" id="phone-systems">
+        <div class="container">
+            <div class="svc-block">
+                <div class="svc-icon-wrap">📞</div>
+                <div class="svc-content">
+                    <div class="svc-tag">Service 05</div>
+                    <h2 class="svc-title">Phone <span class="grad-text">Systems</span></h2>
+                    <p class="svc-desc">Never miss a lead again. We build AI-powered phone automation systems that
+                        handle inbound calls, route intelligently, and follow up automatically — 24 hours a day.</p>
+                    <ul class="svc-features">
+                        <li>✦ AI voice receptionist and IVR systems</li>
+                        <li>✦ Intelligent call routing and screening</li>
+                        <li>✦ Voicemail transcription and auto-response</li>
+                        <li>✦ Appointment booking via phone</li>
+                        <li>✦ CRM sync for every call interaction</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Set Up My Phone System →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="cta-bg-glow"></div>
+        <div class="container">
+            <h2>Not Sure Where to Start?</h2>
+            <p>Book a free 30-minute call and we'll tell you exactly what your business needs.</p>
+            <a href="contact.html" class="btn btn-primary btn-large">Book a Free Call →</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+                    </a>
+                    <p>Your business, fully equipped.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#ai-agents">AI Agents</a></li>
+                        <li><a href="#websites">Websites</a></li>
+                        <li><a href="#social-media">Social Media</a></li>
+                        <li><a href="#ads">Ad Campaigns</a></li>
+                        <li><a href="#phone-systems">Phone Systems</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get In Touch</h4>
+                    <p>📧 hello@technicalcreations.com</p>
+                    <p>📞 (555) 000-0000</p>
+                    <div class="social-links"><a href="#" class="social-btn">in</a><a href="#"
+                            class="social-btn">𝕏</a><a href="#" class="social-btn">ig</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Technical Creations LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/intro.js"></script>
+</body>
+
+</html>

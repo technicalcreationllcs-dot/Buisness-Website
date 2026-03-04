@@ -1,0 +1,169 @@
+/* ══════════════════════
+   PORTFOLIO CSS
+   ══════════════════════ */
+
+/* STATS STRIP */
+.stats-strip {
+    padding: 40px 0;
+    background: var(--bg-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.strip-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.strip-stat {
+    text-align: center;
+}
+
+.s-num {
+    display: block;
+    font-family: var(--font-head);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.s-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-dimmer);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 4px;
+}
+
+.strip-div {
+    width: 1px;
+    height: 48px;
+    background: var(--border);
+}
+
+/* CASE STUDIES */
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.case-card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.case-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: rgba(245, 197, 24, 0.1);
+    border: 1px solid rgba(245, 197, 24, 0.25);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+.case-visual {
+    border-radius: var(--radius-sm);
+    padding: 28px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+}
+
+.cs-ai {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cs-web {
+    border-color: rgba(245, 197, 24, 0.3);
+    background: rgba(245, 197, 24, 0.05);
+}
+
+.cs-phone {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.cs-social {
+    border-color: rgba(245, 197, 24, 0.3);
+    background: rgba(245, 197, 24, 0.05);
+}
+
+.cs-graphic {
+    font-size: 2.8rem;
+}
+
+.cs-metric {
+    text-align: right;
+}
+
+.cs-big {
+    display: block;
+    font-family: var(--font-head);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.cs-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-dimmer);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.case-card h3 {
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.case-card>p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    flex: 1;
+}
+
+.case-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.result-pill {
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 5px 12px;
+    color: var(--text-dim);
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    .strip-div {
+        display: none;
+    }
+
+    .strip-stats {
+        gap: 24px;
+    }
+}

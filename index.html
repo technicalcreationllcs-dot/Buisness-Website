@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technical Creations LLC – We Build the Machine</title>
+  <meta name="description"
+    content="Technical Creations LLC builds AI agents, custom websites, social media systems, ad campaigns, and phone automation so your business runs on autopilot." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <!-- Three.js and GSAP for Intro -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+
+<body>
+  <!-- 3D BAGEL INTRO -->
+  <div id="intro-container">
+    <div id="intro-instruction">Click the Bagel to Enter</div>
+  </div>
+
+  <!-- ASCII DONUT BACKGROUND -->
+  <pre id="ascii-donut"></pre>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🚀 AI-Powered Business Solutions</div>
+      <h1 class="hero-title">
+        We Build the Machine.<br />
+        <span class="grad-text">You Run the Business.</span>
+      </h1>
+      <p class="hero-sub">
+        AI agents, custom websites, social media systems, ad campaigns &amp; phone automation — everything your business
+        needs to scale on autopilot.
+      </p>
+      <div class="hero-ctas">
+        <a href="contact.html" class="btn btn-primary">Book a Free Call</a>
+        <a href="services.html" class="btn btn-ghost">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Clients Served</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">3x</span><span class="stat-label">Avg ROI</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">AI Systems Running</span></div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── SERVICES OVERVIEW ─────────────────────────────────────── -->
+  <section class="section services-preview" id="servicesPreview">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">What We Do</p>
+        <h2 class="section-title">Everything You Need.<br /><span class="grad-text">Nothing You Don't.</span></h2>
+        <p class="section-sub">End-to-end digital infrastructure built for businesses that want to scale without the
+          overhead.</p>
+      </div>
+      <div class="service-cards">
+        <a href="services.html#ai-agents" class="glass-card service-card">
+          <div class="card-icon">🤖</div>
+          <h3>AI Agents</h3>
+          <p>Custom-trained AI that handles customer service, lead qualification, and business automation 24/7.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="services.html#websites" class="glass-card service-card">
+          <div class="card-icon">🌐</div>
+          <h3>Custom Websites</h3>
+          <p>High-converting, blazing-fast websites designed to turn visitors into paying customers.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="services.html#social-media" class="glass-card service-card">
+          <div class="card-icon">📱</div>
+          <h3>Social Media Systems</h3>
+          <p>Automated content pipelines, scheduling, and growth strategies that keep your brand active.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="services.html#ads" class="glass-card service-card">
+          <div class="card-icon">🎯</div>
+          <h3>Ad Campaigns</h3>
+          <p>Data-driven Google &amp; Meta ad campaigns built to maximize ROAS and scale profitably.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="services.html#phone-systems" class="glass-card service-card">
+          <div class="card-icon">📞</div>
+          <h3>Phone Systems</h3>
+          <p>AI-powered phone automation, IVR systems, and call routing that never misses a lead.</p>
+          <span class="card-arrow">→</span>
+        </a>
+      </div>
+      <div class="center-cta">
+        <a href="services.html" class="btn btn-primary">See All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS PREVIEW ──────────────────────────────────── -->
+  <section class="section hiw-preview">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">The Process</p>
+        <h2 class="section-title">Simple Steps.<br /><span class="grad-text">Powerful Results.</span></h2>
+      </div>
+      <div class="hiw-steps">
+        <div class="hiw-step">
+          <div class="step-num grad-text">01</div>
+          <div class="step-icon">💬</div>
+          <h3>Consult</h3>
+          <p>We learn your business, goals, and gaps in a free strategy session.</p>
+        </div>
+        <div class="hiw-connector">
+          <div class="connector-line"></div>
+        </div>
+        <div class="hiw-step">
+          <div class="step-num grad-text">02</div>
+          <div class="step-icon">⚙️</div>
+          <h3>Build</h3>
+          <p>Our team crafts your custom systems — AI, web, ads, and automation.</p>
+        </div>
+        <div class="hiw-connector">
+          <div class="connector-line"></div>
+        </div>
+        <div class="hiw-step">
+          <div class="step-num grad-text">03</div>
+          <div class="step-icon">🚀</div>
+          <h3>Launch</h3>
+          <p>We deploy, monitor, and optimize so you scale with confidence.</p>
+        </div>
+      </div>
+      <div class="center-cta">
+        <a href="how-it-works.html" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIAL STRIP ─────────────────────────────────────── -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Client Results</p>
+        <h2 class="section-title">Real Businesses.<br /><span class="grad-text">Real Growth.</span></h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="glass-card testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Their AI agent handles 80% of our customer inquiries automatically. We saved 40 hours a week instantly."
+          </p>
+          <div class="t-author">
+            <div class="t-avatar">JM</div>
+            <div><strong>James M.</strong><br /><small>E-Commerce Store Owner</small></div>
+          </div>
+        </div>
+        <div class="glass-card testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Our new website converted 3x better than our old one within the first month. Incredible ROI."</p>
+          <div class="t-author">
+            <div class="t-avatar">SR</div>
+            <div><strong>Sarah R.</strong><br /><small>Real Estate Agent</small></div>
+          </div>
+        </div>
+        <div class="glass-card testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The ad campaigns they run bring in qualified leads daily. Best investment we've made this year."</p>
+          <div class="t-author">
+            <div class="t-avatar">DK</div>
+            <div><strong>David K.</strong><br /><small>Local Service Business</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA BANNER ────────────────────────────────────────────── -->
+  <section class="cta-banner">
+    <div class="cta-bg-glow"></div>
+    <div class="container">
+      <h2>Ready to Automate Your Business?</h2>
+      <p>Book a free 30-minute strategy call and we'll map out exactly what you need.</p>
+      <a href="contact.html" class="btn btn-primary btn-large">Book Your Free Call →</a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+          </a>
+          <p>Your business, fully equipped.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#ai-agents">AI Agents</a></li>
+            <li><a href="services.html#websites">Websites</a></li>
+            <li><a href="services.html#social-media">Social Media</a></li>
+            <li><a href="services.html#ads">Ad Campaigns</a></li>
+            <li><a href="services.html#phone-systems">Phone Systems</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Get In Touch</h4>
+          <p>📧 hello@technicalcreations.com</p>
+          <p>📞 (555) 000-0000</p>
+          <div class="social-links">
+            <a href="#" class="social-btn">in</a>
+            <a href="#" class="social-btn">𝕏</a>
+            <a href="#" class="social-btn">ig</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Technical Creations LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script src="js/ascii-donut.js"></script>
+  <script src="js/intro.js"></script>
+</body>
+
+</html>
