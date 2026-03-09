@@ -2,11 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("intro-container");
     if (!container) return;
 
-    // ── SHOW INTRO ONLY ONCE per session ──
-    if (sessionStorage.getItem('introSeen')) {
+    // ── SHOW INTRO ONLY ONCE per session OR ON RELOAD ──
+    // performance.navigation.type === 1 means the page was reloaded
+    // performance.getEntriesByType("navigation")[0].type === 'reload' for newer browsers
+    const navEntries = performance.getEntriesByType("navigation");
+    const isReload = navEntries.length > 0 && navEntries[0].type === 'reload' || performance.navigation.type === 1;
+    
+    // Play intro if it's the very first visit (no sessionStorage item) OR if explicitly reloaded
+    if (sessionStorage.getItem('introSeen') && !isReload) {
         container.style.display = 'none';
         return;
     }
+    
+    // We are showing the intro, clear it so next internal navigation doesn't play it
+    sessionStorage.removeItem('introSeen');
 
     document.body.style.overflow = 'hidden';
 
@@ -32,24 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!document.getElementById('hint-flash-style')) {
                 const style = document.createElement('style');
                 style.id = 'hint-flash-style';
-                style.textContent = '@keyframes hintFlash{0%,100%{opacity:0}50%{opacity:1}}@keyframes hintFloat{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.1)}}';
+                style.textContent = '@keyframes hintFlash{0%,100%{opacity:0}50%{opacity:1}}';
                 document.head.appendChild(style);
             }
         }, 5000));
 
-        // 10s — floating cursor with "click me"
-        hintTimers.push(setTimeout(() => {
-            hintCursorEl = document.createElement('div');
-            hintCursorEl.innerHTML = '👆<span style="display:block;font-size:11px;margin-top:4px;letter-spacing:2px;">CLICK ME</span>';
-            hintCursorEl.style.cssText = 'position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:32px;color:white;text-align:center;pointer-events:none;z-index:20;animation:hintFloat 1.5s ease-in-out infinite;text-shadow:0 0 15px rgba(255,255,255,0.7);';
-            container.appendChild(hintCursorEl);
-        }, 10000));
-
-        // 15s — auto-start the transition
+        // 10s — auto-start the transition (5 seconds after flash)
         hintTimers.push(setTimeout(() => {
             clearHints();
             triggerClick();
-        }, 15000));
+        }, 10000));
     }
 
     function clearHints() {
@@ -58,24 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (hintFlashEl) { hintFlashEl.remove(); hintFlashEl = null; }
         if (hintCursorEl) { hintCursorEl.remove(); hintCursorEl = null; }
     }
-
-    // ════════════════════════════════════════════
-    // IMAGE PRELOAD — load all flip images immediately
-    // ════════════════════════════════════════════
-    const flipImageSrcs = [
-        'images/bagel1-removebg-preview.png',                          // photorealistic angled
-        'images/bagel3-removebg-preview.png',                          // B&W zine EVERYTHING
-        'images/bagel2-removebg-preview.png',                          // deep ocean bioluminescent
-        'images/bagel4-removebg-preview.png',                          // glitch digital
-        'images/bagel5-removebg-preview.png',                          // volcanic void EEAAO
-        'images/black_backgroung_transparent_bagel-removebg-preview.png', // dark transparent
-    ];
-    const flipImages = [];
-    flipImageSrcs.forEach(src => {
-        const img = new Image();
-        img.src = src;
-        flipImages.push(img);
-    });
 
     // ════════════════════════════════════════════
     // RENDERER SETUP (r128 compatible)
@@ -115,21 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const flashDiv = document.createElement('div');
     flashDiv.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;background:white;opacity:0;pointer-events:none;z-index:30;';
     container.appendChild(flashDiv);
-
-    // Image flip overlay (hidden initially)
-    const flipOverlay = document.createElement('div');
-    flipOverlay.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;z-index:20;display:none;background:#0a0a0a;justify-content:center;align-items:center;';
-    container.appendChild(flipOverlay);
-
-    // Flip image element
-    const flipImg = document.createElement('img');
-    flipImg.style.cssText = 'max-width:80%;max-height:80%;object-fit:contain;display:block;margin:auto;';
-    flipOverlay.appendChild(flipImg);
-
-    // Dark vignette over the flip image to blend light backgrounds
-    const vignette = document.createElement('div');
-    vignette.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;background:radial-gradient(ellipse at center, transparent 35%, #0a0a0a 75%);';
-    flipOverlay.appendChild(vignette);
 
     // ════════════════════════════════════════════
     // LIGHTING — ominous with sun core
@@ -689,7 +657,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const tl = gsap.timeline();
 
-        // ── PHASE 1: Camera rushes toward hole, light ESCALATES ──
+        // ── FAST TRANSITION: Camera rushes toward hole, light ESCALATES ──
         tl.to(camera.position, { z: 4, duration: 1.2, ease: 'power2.in' }, 0);
 
         // Ramp up glare intensity as we zoom in
@@ -700,86 +668,10 @@ document.addEventListener("DOMContentLoaded", () => {
             onUpdate: function () { transitionIntensity = this.targets()[0].val; }
         }, 0);
 
-        // Light slowly takes over — smooth build, NO flash
-        tl.to(flashDiv, { opacity: 0.15, duration: 0.5, ease: 'power1.in' }, 0.3);
-        tl.to(flashDiv, { opacity: 0.35, duration: 0.4, ease: 'power1.in' }, 0.7);
+        // Fast white takeover
+        tl.to(flashDiv, { opacity: 1, duration: 1.2, ease: 'power2.in' }, 0);
 
-        // ── DIMENSION SHIFT 1: Smooth crossfade to negative ──
-        // Use CSS transition for smooth filter changes (seizure-safe)
-        tl.call(() => {
-            container.style.transition = 'filter 0.3s ease';
-            container.style.filter = 'invert(0.8) saturate(0.3)';
-        }, null, 0.6);
-        tl.call(() => {
-            container.style.filter = 'none';
-        }, null, 1.0);
-
-        // ── DIMENSION SHIFT 2: Smooth B&W hold ──
-        tl.call(() => {
-            container.style.filter = 'invert(0.7) grayscale(1) contrast(1.5)';
-        }, null, 1.1);
-        tl.to(flashDiv, { opacity: 0.5, duration: 0.2, ease: 'power1.in' }, 1.2);
-        tl.call(() => {
-            container.style.filter = 'none';
-        }, null, 1.4);
-
-        // ── PHASE 2: Smooth bright takeover, switch to image overlay ──
-        tl.to(flashDiv, { opacity: 0.85, duration: 0.25, ease: 'power2.in' }, 1.45);
-        tl.call(() => {
-            renderer.domElement.style.display = 'none';
-            glareCanvas.style.display = 'none';
-            flipOverlay.style.display = 'flex';
-            container.style.filter = 'none';
-            container.style.transition = '';
-        }, null, 1.7);
-        tl.to(flashDiv, { opacity: 0, duration: 0.2, ease: 'power1.out' }, 1.7);
-
-        // ── PHASE 3: Interdimensional image cycling — SEIZURE SAFE ──
-        // Smooth filter transitions, no strobing, minimum 0.2s per image
-        const dimensionFilters = [
-            'none',                                            // normal
-            'invert(0.85) hue-rotate(180deg)',                 // negative dimension
-            'grayscale(1) contrast(1.8) brightness(1.3)',      // overexposed B&W
-            'invert(0.9) saturate(0) contrast(1.8)',           // soft negative B&W
-            'hue-rotate(90deg) saturate(2) brightness(0.9)',   // shifted colors
-            'invert(0.8) brightness(1.5) contrast(0.7)',       // washed negative
-        ];
-
-        // Smooth transition on the overlay for filter changes
-        flipOverlay.style.transition = 'filter 0.15s ease';
-
-        let timeOffset = 1.95;
-        for (let i = 0; i < flipImages.length; i++) {
-            (function (index) {
-                // Minimum 0.2s per image — safe rate (max 5/sec, well under danger)
-                const duration = Math.max(0.2, 0.35 - index * 0.025);
-
-                tl.call(() => {
-                    flipImg.src = flipImages[index].src;
-                    flipOverlay.style.filter = dimensionFilters[index % dimensionFilters.length];
-                }, null, timeOffset);
-
-                // Smooth scale pop — gentle, not violent
-                tl.fromTo(flipImg,
-                    { scale: 0.9, opacity: 0.7 },
-                    { scale: 1.02, opacity: 1, duration: duration * 0.7, ease: 'power2.out' },
-                    timeOffset
-                );
-
-                // Soft white flash between images — never black, never full opacity
-                tl.to(flashDiv, { opacity: 0.25, duration: duration * 0.3, ease: 'power1.out' }, timeOffset);
-                tl.to(flashDiv, { opacity: 0, duration: duration * 0.4, ease: 'power1.in' }, timeOffset + duration * 0.3);
-
-                timeOffset += duration;
-            })(i);
-        }
-
-        // ── PHASE 4: Final smooth white takeover ──
-        tl.call(() => {
-            flipOverlay.style.filter = 'none';
-            flipOverlay.style.transition = '';
-        }, null, timeOffset);
-        tl.to(flashDiv, { opacity: 1, duration: 0.5, ease: 'power2.in' }, timeOffset);
+        // Final smooth white takeover and reveal the site
         tl.call(() => {
             container.style.display = 'none';
             container.style.pointerEvents = 'none';
@@ -798,7 +690,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ease: 'power2.out',
                 onComplete: () => bodyFlash.remove()
             });
-        }, null, timeOffset + 0.55);
+        }, null, 1.2);
     }
     container.addEventListener('click', startTransition);
 
