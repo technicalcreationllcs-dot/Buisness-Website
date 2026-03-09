@@ -3,19 +3,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!container) return;
 
     // ── SHOW INTRO ONLY ONCE per session OR ON RELOAD ──
-    // performance.navigation.type === 1 means the page was reloaded
-    // performance.getEntriesByType("navigation")[0].type === 'reload' for newer browsers
-    const navEntries = performance.getEntriesByType("navigation");
-    const isReload = navEntries.length > 0 && navEntries[0].type === 'reload' || performance.navigation.type === 1;
-    
-    // Play intro if it's the very first visit (no sessionStorage item) OR if explicitly reloaded
-    if (sessionStorage.getItem('introSeen') && !isReload) {
+    let isReload = false;
+    try {
+        const navEntries = performance.getEntriesByType("navigation");
+        if (navEntries.length > 0 && navEntries[0].type === 'reload') {
+            isReload = true;
+        } else if (performance.navigation && performance.navigation.type === 1) {
+            isReload = true;
+        }
+    } catch (e) {
+        // Fallback or ignore if performance API is not available
+    }
+
+    let hasSeenIntro = false;
+    try {
+        hasSeenIntro = sessionStorage.getItem('introSeen');
+    } catch (e) {
+        // Fallback for file:// security errors
+    }
+
+    // Play intro if it's the very first visit OR if explicitly reloaded
+    if (hasSeenIntro && !isReload) {
         container.style.display = 'none';
         return;
     }
-    
-    // We are showing the intro, clear it so next internal navigation doesn't play it
-    sessionStorage.removeItem('introSeen');
+
+    // Mark as seen immediately so any fast navigation won't break it
+    try {
+        sessionStorage.setItem('introSeen', '1');
+    } catch (e) {}
 
     document.body.style.overflow = 'hidden';
 
