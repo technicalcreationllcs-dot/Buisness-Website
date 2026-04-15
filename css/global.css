@@ -8,6 +8,7 @@
 /* ── TOKENS ─────────────────────────────────── */
 :root {
   --bg: #E8E0D5;
+  --bg-solid: #E8E0D5;
   --bg-dark: #1D3557;
   --bg-dark-alt: #254B6E;
   --surface: rgba(255, 255, 255, 0.18);
@@ -703,7 +704,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   pointer-events: none;
-  animation: fadePulse 2s infinite;
+  animation: none;
   z-index: 1000000;
   transition: opacity 0.3s ease;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);

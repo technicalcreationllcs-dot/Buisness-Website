@@ -26,8 +26,7 @@
 /* ── SECTION UPDATES ───────────────────────── */
 .section {
   padding: 80px 24px;
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
 }
 
 .section .container {
@@ -36,33 +35,28 @@
 }
 
 .trust-bar {
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
   padding: 32px 24px;
   text-align: center;
 }
 
 .services-preview {
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
   padding: 80px 24px;
 }
 
 .hiw-preview {
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
   padding: 80px 24px;
 }
 
 .testimonials {
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
   padding: 80px 24px;
 }
 
 .cta-banner {
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
   padding: 80px 24px;
 }
 
@@ -74,8 +68,7 @@
   align-items: center;
   overflow: hidden;
   padding: 100px 40px 60px;
-  background: var(--bg);
-  background-image: var(--noise);
+  background: var(--bg-solid);
 }
 
 #ascii-donut {
@@ -226,7 +219,7 @@
 .hero-gear-svg .gear-large {
   width: 80px;
   height: 80px;
-  animation: gearSpin 12s linear infinite;
+  animation: none;
   left: calc(50% - 70px);
   top: 0;
 }
@@ -234,7 +227,7 @@
 .hero-gear-svg .gear-medium {
   width: 56px;
   height: 56px;
-  animation: gearSpinReverse 8s linear infinite;
+  animation: none;
   left: calc(50% - 5px);
   top: 10px;
 }
@@ -242,7 +235,7 @@
 .hero-gear-svg .gear-small {
   width: 40px;
   height: 40px;
-  animation: gearSpin 5s linear infinite;
+  animation: none;
   left: calc(50% + 30px);
   top: 55px;
 }
@@ -302,12 +295,12 @@
 .scroll-line::after {
   content: '';
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: var(--navy);
-  animation: scrollFill 1.8s ease-in-out infinite;
+  animation: none;
 }
 
 @keyframes scrollFill {
