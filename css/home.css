@@ -2,6 +2,70 @@
    HOME PAGE STYLES — Redesign
    ════════════════════════════ */
 
+/* ── GLASS CONTAINER ───────────────────────── */
+.glass-container {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(255, 255, 255, 0.40);
+  border-radius: 24px;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.10);
+  padding: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .glass-container {
+    padding: 24px;
+    border-radius: 16px;
+  }
+}
+
+/* ── SECTION UPDATES ───────────────────────── */
+.section {
+  padding: 80px 24px;
+  background: var(--bg);
+  background-image: var(--noise);
+}
+
+.section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trust-bar {
+  background: var(--bg);
+  background-image: var(--noise);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.services-preview {
+  background: var(--bg);
+  background-image: var(--noise);
+  padding: 80px 24px;
+}
+
+.hiw-preview {
+  background: var(--bg);
+  background-image: var(--noise);
+  padding: 80px 24px;
+}
+
+.testimonials {
+  background: var(--bg);
+  background-image: var(--noise);
+  padding: 80px 24px;
+}
+
+.cta-banner {
+  background: var(--bg);
+  background-image: var(--noise);
+  padding: 80px 24px;
+}
+
 /* ── HERO ───────────────────────────────────── */
 .hero {
   position: relative;
