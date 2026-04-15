@@ -1,272 +1,316 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pricing – Technical Creations LLC</title>
-    <meta name="description"
-        content="Transparent pricing for AI agents, websites, social media, ad campaigns, and phone systems. Choose the package that fits your business." />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/pricing.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- Three.js and GSAP for Intro -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing – Technical Creations LLC</title>
+  <meta name="description" content="Transparent pricing for AI agents, websites, social media, ad campaigns, and phone systems. Choose the package that fits your business." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- 3D BAGEL INTRO -->
-    <div id="intro-container">
-        <div id="intro-instruction">Click the Bagel to Enter</div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </nav>
 
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
-                <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger"
-                aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <!-- Hero -->
+  <section class="pricing-hero">
+    <div class="container">
+      <p class="section-tag">Transparent Pricing</p>
+      <h1>Pricing That Fits<br /><span class="accent-blue">Your Business.</span></h1>
+      <p>Every business is different. These are starting points. Book a call and we will quote exactly what you need.</p>
+    </div>
+  </section>
+
+  <!-- Package Cards -->
+  <section class="pricing-packages">
+    <div class="container">
+      <p class="section-tag">Packages</p>
+      <h2 class="section-title" style="margin-bottom:48px;">Pick Your Starting Point.</h2>
+      <div class="packages-grid">
+        <!-- Starter -->
+        <div class="package-card">
+          <h3>Starter</h3>
+          <div class="package-price">
+            <span class="price-amount">$500</span>
+            <span class="price-setup">one-time fee</span>
+          </div>
+          <hr />
+          <ul class="package-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Website design and hosting</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> AI chatbot</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Google Business Profile setup</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Get Started</a>
         </div>
-    </nav>
 
-    <section class="page-hero">
-        <div class="container">
-            <p class="section-tag">Pricing</p>
-            <h1>Transparent Pricing.<br /><span class="grad-text">No Surprises.</span></h1>
-            <p>Every package is built around your business goals. Not sure which fits? Book a free call and we'll tell
-                you.</p>
+        <!-- Growth -->
+        <div class="package-card featured">
+          <div class="popular-badge">Most Popular</div>
+          <h3>Growth</h3>
+          <div class="package-price">
+            <span class="price-amount">$1,000</span>
+            <span class="price-setup">monthly retainer</span>
+          </div>
+          <hr />
+          <ul class="package-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Everything in Starter</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> AI phone answering</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Missed call text-back</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Local SEO</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Review automation</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Get Started</a>
         </div>
-    </section>
 
-    <!-- PRICING TOGGLE (Monthly / One-time) -->
-    <section class="section pricing-section">
-        <div class="container">
-
-            <div class="pricing-grid">
-
-                <!-- STARTER -->
-                <div class="price-card glass-card">
-                    <div class="pc-tag">Starter</div>
-                    <div class="pc-price"><span class="pc-dollar">$</span>1,500<span class="pc-period">/project</span>
-                    </div>
-                    <p class="pc-desc">Perfect for small businesses getting their digital foundation right.</p>
-                    <ul class="pc-features">
-                        <li><span class="check">✦</span> 5-page custom website</li>
-                        <li><span class="check">✦</span> Basic SEO setup</li>
-                        <li><span class="check">✦</span> Contact/lead capture form</li>
-                        <li><span class="check">✦</span> Mobile responsive design</li>
-                        <li><span class="check">✦</span> 30-day post-launch support</li>
-                        <li class="dimmed"><span>✦</span> AI agent integration</li>
-                        <li class="dimmed"><span>✦</span> Ad campaign management</li>
-                        <li class="dimmed"><span>✦</span> Social media automation</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-ghost btn-full">Get Started</a>
-                </div>
-
-                <!-- GROWTH (FEATURED) -->
-                <div class="price-card glass-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="pc-tag">Growth</div>
-                    <div class="pc-price"><span class="pc-dollar">$</span>3,500<span class="pc-period">/month</span>
-                    </div>
-                    <p class="pc-desc">For businesses ready to scale leads, automate operations, and dominate their
-                        market.</p>
-                    <ul class="pc-features">
-                        <li><span class="check">✦</span> Custom website (up to 10 pages)</li>
-                        <li><span class="check">✦</span> AI customer service agent</li>
-                        <li><span class="check">✦</span> Google or Meta ad campaign</li>
-                        <li><span class="check">✦</span> Social media content (3x/week)</li>
-                        <li><span class="check">✦</span> Monthly strategy calls</li>
-                        <li><span class="check">✦</span> Performance dashboard</li>
-                        <li><span class="check">✦</span> Priority support</li>
-                        <li class="dimmed"><span>✦</span> Phone system automation</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary btn-full">Get Started</a>
-                </div>
-
-                <!-- ENTERPRISE -->
-                <div class="price-card glass-card">
-                    <div class="pc-tag">Enterprise</div>
-                    <div class="pc-price">Custom</div>
-                    <p class="pc-desc">Full-stack deployment for businesses that need everything running at once.</p>
-                    <ul class="pc-features">
-                        <li><span class="check">✦</span> Everything in Growth</li>
-                        <li><span class="check">✦</span> AI phone system</li>
-                        <li><span class="check">✦</span> Multi-channel ad campaigns</li>
-                        <li><span class="check">✦</span> Daily social media content</li>
-                        <li><span class="check">✦</span> CRM + automation setup</li>
-                        <li><span class="check">✦</span> Dedicated account manager</li>
-                        <li><span class="check">✦</span> Weekly reporting + calls</li>
-                        <li><span class="check">✦</span> Full system monitoring 24/7</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-ghost btn-full">Contact Us</a>
-                </div>
-
-            </div>
-
-            <!-- ADD-ONS -->
-            <div class="addons">
-                <div class="section-header" style="margin-bottom:40px;">
-                    <p class="section-tag">À La Carte</p>
-                    <h2 class="section-title">Add What You Need</h2>
-                </div>
-                <div class="addon-grid">
-                    <div class="glass-card addon-card">
-                        <div class="addon-icon">🤖</div>
-                        <h4>AI Agent</h4>
-                        <p>Custom-trained for your business</p>
-                        <span class="addon-price">from $800/mo</span>
-                    </div>
-                    <div class="glass-card addon-card">
-                        <div class="addon-icon">📞</div>
-                        <h4>Phone System</h4>
-                        <p>AI voice receptionist + routing</p>
-                        <span class="addon-price">from $500/mo</span>
-                    </div>
-                    <div class="glass-card addon-card">
-                        <div class="addon-icon">🎯</div>
-                        <h4>Ad Management</h4>
-                        <p>Google or Meta, managed monthly</p>
-                        <span class="addon-price">from $750/mo</span>
-                    </div>
-                    <div class="glass-card addon-card">
-                        <div class="addon-icon">📱</div>
-                        <h4>Social Media</h4>
-                        <p>Content creation + scheduling</p>
-                        <span class="addon-price">from $600/mo</span>
-                    </div>
-                </div>
-            </div>
-
+        <!-- Full Stack -->
+        <div class="package-card">
+          <h3>Full Stack</h3>
+          <div class="package-price">
+            <span class="price-amount">$2,000</span>
+            <span class="price-setup">premium retainer</span>
+          </div>
+          <hr />
+          <ul class="package-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Everything in Growth</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Full workflow automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Email and SMS marketing</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Content calendar</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Weekly reporting + CRM</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Get Started</a>
         </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="section faq-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">FAQ</p>
-                <h2 class="section-title">Common <span class="grad-text">Questions</span></h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item glass-card" id="faq1">
-                    <button class="faq-q" onclick="toggleFaq('faq1')">
-                        Do you require long-term contracts?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>No lock-in contracts for monthly plans. We earn your business every month. One-time project
-                            work has a single payment structure with no recurring obligations unless you want ongoing
-                            support.</p>
-                    </div>
-                </div>
-                <div class="faq-item glass-card" id="faq2">
-                    <button class="faq-q" onclick="toggleFaq('faq2')">
-                        How long does it take to get started?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>We can typically onboard new clients within 48–72 hours of our strategy call. Most projects
-                            kick off within one week of signing.</p>
-                    </div>
-                </div>
-                <div class="faq-item glass-card" id="faq3">
-                    <button class="faq-q" onclick="toggleFaq('faq3')">
-                        Do I own everything you build?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>100%. All code, content, ad accounts, and systems we build are fully yours. No proprietary
-                            lock-in. If you ever leave (though we hope you won't), you take everything with you.</p>
-                    </div>
-                </div>
-                <div class="faq-item glass-card" id="faq4">
-                    <button class="faq-q" onclick="toggleFaq('faq4')">
-                        Can I customize a package?
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-a">
-                        <p>Absolutely. Every business is different. Book a call and we'll build a custom scope that
-                            matches exactly what you need and your budget.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Custom -->
+        <div class="package-card">
+          <h3>Custom</h3>
+          <div class="package-price">
+            <span class="price-amount">Custom</span>
+            <span class="price-setup">quoted per project</span>
+          </div>
+          <hr />
+          <ul class="package-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Pick and choose any service</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Combine any items from our menu</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Transparent per-service pricing</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> No long-term contracts</li>
+          </ul>
+          <a href="contact.html" class="package-btn">Get a Quote</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="cta-banner">
-        <div class="cta-bg-glow"></div>
-        <div class="container">
-            <h2>Ready to Pick a Plan?</h2>
-            <p>Let's find the right fit in a free 30-minute call.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Book a Free Call →</a>
+  <!-- Pricing Slider -->
+  <section class="pricing-slider-section">
+    <div class="container">
+      <p class="section-tag">Scale With Your Business</p>
+      <h2 class="section-title" style="margin-bottom:12px;">Pricing Grows With You.</h2>
+      <p class="section-sub" style="margin-bottom:48px;">Drag the slider to see how pricing changes by business size.</p>
+
+      <div class="slider-layout">
+        <div class="slider-icon" id="sliderIcon">
+          <svg viewBox="0 0 256 256"><line x1="128" y1="24" x2="128" y2="232" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><line x1="96" y1="56" x2="160" y2="56" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><line x1="96" y1="200" x2="160" y2="200" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><path d="M88,128c0-22.09,17.91-40,40-40s40,17.91,40,40-17.91,40-40,40S88,150.09,88,128Z" fill="none" stroke="#1D3557" stroke-width="16"/></svg>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"> <a href="index.html" class="nav-logo">
-                        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-                    </a>
-                    <p>Your business, fully equipped.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#ai-agents">AI Agents</a></li>
-                        <li><a href="services.html#websites">Websites</a></li>
-                        <li><a href="services.html#social-media">Social Media</a></li>
-                        <li><a href="services.html#ads">Ad Campaigns</a></li>
-                        <li><a href="services.html#phone-systems">Phone Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Get In Touch</h4>
-                    <p>📧 hello@technicalcreations.com</p>
-                    <p>📞 (555) 000-0000</p>
-                    <div class="social-links"><a href="#" class="social-btn">in</a><a href="#"
-                            class="social-btn">𝕏</a><a href="#" class="social-btn">ig</a></div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Technical Creations LLC. All rights reserved.</p>
-            </div>
+        <div class="slider-track-wrap" style="position:relative;">
+          <input type="range" min="0" max="2" value="0" class="slider-range" id="pricingSlider" />
+          <div class="slider-labels">
+            <span>Small Business</span>
+            <span>Mid-Size</span>
+            <span>Enterprise</span>
+          </div>
         </div>
-    </footer>
+        <div class="slider-output" id="sliderOutput">
+          <div class="output-size">Small Business</div>
+          <div class="output-price">$300 – $800/mo</div>
+          <div class="output-desc">Starter or Growth package. Website, chatbot, and basic automation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/global.js"></script>
-    <script>
-        function toggleFaq(id) {
-            const item = document.getElementById(id);
-            const isOpen = item.classList.contains('open');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-            if (!isOpen) item.classList.add('open');
-        }
-    </script>
+  <!-- Per-Service Table -->
+  <section class="pricing-table-section">
+    <div class="container">
+      <h2>Service Pricing</h2>
+      <div class="table-wrapper">
+        <table class="pricing-table">
+          <thead><tr><th>Service</th><th>Setup Fee</th><th>Monthly Fee</th></tr></thead>
+          <tbody>
+            <!-- AI & Automation -->
+            <tr><td><strong>AI &amp; AUTOMATION</strong></td><td></td><td></td></tr>
+            <tr><td>AI chatbots / lead capture bots</td><td>$300 – $800</td><td>$100 – $200/mo</td></tr>
+            <tr><td>AI phone answering &amp; appointment booking</td><td>$500 – $1,200</td><td>$200 – $400/mo</td></tr>
+            <tr><td>AI receptionist (multi-location)</td><td>$1,000 – $2,500</td><td>$300 – $600/mo</td></tr>
+            <tr><td>AI-powered FAQ system</td><td>$200 – $500</td><td>Included</td></tr>
+            <tr><td>AI proposal / quote generator</td><td>$500 – $1,500</td><td>Included</td></tr>
+            <tr><td>AI employee onboarding assistant</td><td>$500 – $1,200</td><td>Included</td></tr>
+            <tr><td>Automated lead scoring</td><td>$300 – $800</td><td>$100/mo</td></tr>
+            <tr><td>Contract / document automation</td><td>$300 – $1,000</td><td>Included</td></tr>
+            <tr><td>Inventory alert automation</td><td>$200 – $500</td><td>$50/mo</td></tr>
+            <tr><td>Workflow automation (follow-ups, invoicing, reminders)</td><td>$300 – $1,000</td><td>$100/mo</td></tr>
+            <tr><td>AI follow-up sequences (SMS + email)</td><td>$300 – $600</td><td>$100/mo</td></tr>
+            <tr><td>Missed call text-back</td><td>$150</td><td>$100/mo</td></tr>
+            <!-- Websites -->
+            <tr><td><strong>WEBSITES &amp; DIGITAL PRESENCE</strong></td><td></td><td></td></tr>
+            <tr><td>Website design &amp; development</td><td>$500 – $3,000</td><td>$100 – $300/mo</td></tr>
+            <tr><td>Website hosting &amp; maintenance retainer</td><td>–</td><td>$100 – $300/mo</td></tr>
+            <tr><td>Google Business Profile optimization</td><td>$150 – $300</td><td>One-time</td></tr>
+            <tr><td>Google Maps placement &amp; optimization</td><td>$150 – $300</td><td>One-time</td></tr>
+            <tr><td>Citation building / local directory listings</td><td>$200 – $500</td><td>One-time</td></tr>
+            <tr><td>Local SEO</td><td>–</td><td>$300 – $800/mo</td></tr>
+            <!-- Voice -->
+            <tr><td><strong>VOICE &amp; COMMUNICATION</strong></td><td></td><td></td></tr>
+            <tr><td>AI phone answering &amp; call routing</td><td>$500 – $1,200</td><td>$200 – $400/mo</td></tr>
+            <tr><td>IVR phone tree setup</td><td>$300 – $800</td><td>Included</td></tr>
+            <tr><td>Two-way SMS marketing systems</td><td>$200 – $500</td><td>$100 – $200/mo</td></tr>
+            <tr><td>Ringless voicemail drops</td><td>$150 – $300</td><td>$100/mo</td></tr>
+            <tr><td>Call tracking and recording summaries</td><td>$200 – $400</td><td>$100/mo</td></tr>
+            <!-- Reputation -->
+            <tr><td><strong>REPUTATION MANAGEMENT</strong></td><td></td><td></td></tr>
+            <tr><td>AI review response automation</td><td>$200 – $500</td><td>$100 – $200/mo</td></tr>
+            <tr><td>Review generation campaigns</td><td>$200 – $400</td><td>$100/mo</td></tr>
+            <tr><td>Reputation monitoring dashboards</td><td>$200 – $400</td><td>$100/mo</td></tr>
+            <!-- Marketing -->
+            <tr><td><strong>MARKETING &amp; ADVERTISING</strong></td><td></td><td></td></tr>
+            <tr><td>Google Ads management</td><td>–</td><td>$500/mo or 15%</td></tr>
+            <tr><td>Meta Ads management</td><td>–</td><td>$500/mo or 15%</td></tr>
+            <tr><td>Email marketing automation</td><td>$300</td><td>$200/mo</td></tr>
+            <tr><td>Abandoned cart automation</td><td>$200 – $400</td><td>Included</td></tr>
+            <tr><td>Post-purchase follow-up sequences</td><td>$200 – $400</td><td>Included</td></tr>
+            <tr><td>Upsell / cross-sell email flows</td><td>$200 – $400</td><td>Included</td></tr>
+            <tr><td>Automated social posting &amp; scheduling</td><td>$200 – $400</td><td>$100/mo</td></tr>
+            <!-- Content -->
+            <tr><td><strong>CONTENT CREATION</strong></td><td></td><td></td></tr>
+            <tr><td>AI blog writing on retainer</td><td>–</td><td>$300 – $800/mo</td></tr>
+            <tr><td>AI video scripts</td><td>$100 – $300 each</td><td>–</td></tr>
+            <tr><td>Monthly content calendars</td><td>$200</td><td>$200/mo</td></tr>
+            <tr><td>Product description writing at scale</td><td>$0.50 – $2 per item</td><td>–</td></tr>
+            <!-- Data -->
+            <tr><td><strong>DATA &amp; REPORTING</strong></td><td></td><td></td></tr>
+            <tr><td>Automated weekly business reports</td><td>$200 – $500</td><td>$100/mo</td></tr>
+            <tr><td>Google Analytics dashboard setup</td><td>$200 – $400</td><td>One-time</td></tr>
+            <tr><td>Ad performance reporting automation</td><td>$200 – $400</td><td>$100/mo</td></tr>
+            <tr><td>CRM setup and management</td><td>$300 – $800</td><td>$200/mo</td></tr>
+            <!-- Social -->
+            <tr><td><strong>SOCIAL MEDIA</strong></td><td></td><td></td></tr>
+            <tr><td>Social media management</td><td>–</td><td>$500 – $1,500/mo</td></tr>
+            <tr><td>Monthly content calendars</td><td>$200</td><td>$200/mo</td></tr>
+            <tr><td>Automated scheduling &amp; posting</td><td>$200</td><td>$100/mo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Business Size -->
+  <section class="pricing-scale">
+    <div class="container">
+      <h2>Pricing by Business Size</h2>
+      <div class="scale-grid">
+        <div class="scale-card">
+          <div class="scale-icon"><svg viewBox="0 0 256 256"><path d="M152,208V160H104v48H48V104L128,40l80,64V208Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Small Business</h3>
+          <p class="scale-size">1 – 5 employees</p>
+          <p class="scale-range">$300 – $800/mo</p>
+          <p class="scale-real">Starter or Growth package</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book a Call</a>
+        </div>
+        <div class="scale-card">
+          <div class="scale-icon"><svg viewBox="0 0 256 256"><rect x="16" y="88" width="96" height="128" rx="8" fill="none" stroke="#1D3557" stroke-width="16"/><rect x="144" y="40" width="96" height="176" rx="8" fill="none" stroke="#1D3557" stroke-width="16"/><line x1="56" y1="128" x2="72" y2="128" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><line x1="56" y1="160" x2="72" y2="160" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><line x1="184" y1="80" x2="200" y2="80" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><line x1="184" y1="112" x2="200" y2="112" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/><line x1="184" y1="144" x2="200" y2="144" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round"/></svg></div>
+          <h3>Medium Business</h3>
+          <p class="scale-size">5 – 20 employees</p>
+          <p class="scale-range">$800 – $1,500/mo</p>
+          <p class="scale-real">Growth or Full Stack</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book a Call</a>
+        </div>
+        <div class="scale-card">
+          <div class="scale-icon"><svg viewBox="0 0 256 256"><rect x="16" y="104" width="64" height="112" rx="8" fill="none" stroke="#1D3557" stroke-width="16"/><rect x="96" y="56" width="64" height="160" rx="8" fill="none" stroke="#1D3557" stroke-width="16"/><rect x="176" y="24" width="64" height="192" rx="8" fill="none" stroke="#1D3557" stroke-width="16"/></svg></div>
+          <h3>Large Business</h3>
+          <p class="scale-size">20+ employees</p>
+          <p class="scale-range">$1,500 – $3,000/mo</p>
+          <p class="scale-real">Full Stack or custom, negotiable</p>
+          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Book a Call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Negotiation CTA -->
+  <section class="pricing-cta">
+    <div class="container">
+      <h2>Every business is different.</h2>
+      <p>Tell us your biggest problem. We will tell you exactly what it costs to fix it.</p>
+      <a href="contact.html" class="btn btn-light btn-large">Book a Free Call</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="pricing-faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">Do you charge hourly or by project?<span class="faq-icon">+</span></button><div class="faq-answer"><p>We charge by project with clear setup fees and monthly retainers. No hourly billing, no surprises.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">Are there long-term contracts?<span class="faq-icon">+</span></button><div class="faq-answer"><p>No. All agreements are month-to-month. Give 30 days notice and you are done. No penalties.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">What does setup fee versus monthly fee mean?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Setup fees cover initial configuration, design, and launch. Monthly fees cover hosting, maintenance, and ongoing optimization.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">Do prices go up as my business grows?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Only if you add new services. Your existing retainer stays the same unless you choose to upgrade.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">What if I want to cancel?<span class="faq-icon">+</span></button><div class="faq-answer"><p>Month-to-month. 30 days notice. Everything we built is yours to keep.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a><p>Your business, fully equipped.</p></div>
+        <div class="footer-links"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html#ai-agents">AI &amp; Automation</a></li><li><a href="services.html#websites">Websites</a></li><li><a href="services.html#voice">Voice Systems</a></li><li><a href="services.html#reputation">Reputation</a></li><li><a href="services.html#marketing">Marketing &amp; Ads</a></li><li><a href="services.html#content">Content</a></li><li><a href="services.html#data">Data &amp; Reporting</a></li><li><a href="services.html#social">Social Media</a></li></ul></div>
+        <div class="footer-contact"><h4>Get In Touch</h4><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/><polyline points="224 96 128 160 32 96" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> hello@technicalcreations.com</p><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> (555) 000-0000</p><div class="social-links"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">X</a><a href="#" class="social-btn">ig</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Technical Creations LLC. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script>
+    // Pricing Slider
+    const slider = document.getElementById('pricingSlider');
+    const output = document.getElementById('sliderOutput');
+    const icon = document.getElementById('sliderIcon');
+    const tiers = [
+      { size: 'Small Business', price: '$300 – $800/mo', desc: 'Starter or Growth package. Website, chatbot, and basic automation.' },
+      { size: 'Mid-Size Business', price: '$800 – $1,500/mo', desc: 'Growth or Full Stack. Full automation, AI phone, and reputation management.' },
+      { size: 'Enterprise', price: '$1,500 – $3,000/mo', desc: 'Full Stack or custom. Everything plus ads, advanced AI, and dedicated support.' }
+    ];
+    if (slider && output) {
+      slider.addEventListener('input', () => {
+        const tier = tiers[slider.value];
+        output.style.opacity = '0';
+        setTimeout(() => {
+          output.querySelector('.output-size').textContent = tier.size;
+          output.querySelector('.output-price').textContent = tier.price;
+          output.querySelector('.output-desc').textContent = tier.desc;
+          output.style.opacity = '1';
+        }, 100);
+      });
+      slider.addEventListener('mousedown', () => icon?.classList.add('dragging'));
+      slider.addEventListener('mouseup', () => icon?.classList.remove('dragging'));
+      slider.addEventListener('touchstart', () => icon?.classList.add('dragging'));
+      slider.addEventListener('touchend', () => icon?.classList.remove('dragging'));
+    }
+  </script>
 </body>
-
 </html>

@@ -2,213 +2,204 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How It Works – Technical Creations LLC</title>
-    <meta name="description"
-        content="Our simple 3-step process: consult, build, launch. We handle everything so you can focus on your business." />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/how-it-works.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- Three.js and GSAP for Intro -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works – Technical Creations LLC</title>
+  <meta name="description" content="Our simple 3-step process: consult, build, launch. We handle everything so you can focus on your business." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/how-it-works.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- 3D BAGEL INTRO -->
-    <div id="intro-container">
-        <div id="intro-instruction">Click the Bagel to Enter</div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </nav>
 
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-tag">The Process</p>
+      <h1>Simple Steps.<br /><span class="grad-text">Powerful Results.</span></h1>
+      <p>We handle the complexity. You handle the business. Three steps from conversation to a fully running system.</p>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section timeline-section">
+    <div class="container">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="tl-connector">
+            <div class="tl-dot">01</div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <div class="tl-icon">
+                <svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,0,0,36.18,176.64L24.18,210a16,16,0,0,0,21.15,21.46l34.37-11.46A104,104,0,1,0,128,24Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="tl-time">Week 1</span>
+            </div>
+            <h3>Consult</h3>
+            <p>We kick off with a free 30-minute strategy call to understand your business, goals, and current bottlenecks. Then we map out the exact systems you need — nothing more, nothing less.</p>
+            <ul class="tl-list">
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Business audit and gap analysis</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Goal-setting and KPIs</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Custom roadmap and proposal</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Pricing and timeline confirmation</li>
             </ul>
-            <button class="hamburger" id="hamburger"
-                aria-label="Toggle menu"><span></span><span></span><span></span></button>
+          </div>
         </div>
-    </nav>
 
-    <section class="page-hero">
-        <div class="container">
-            <p class="section-tag">The Process</p>
-            <h1>Simple Steps.<br /><span class="grad-text">Powerful Results.</span></h1>
-            <p>We handle the complexity so you don't have to. Three steps from conversation to a fully running system.
-            </p>
-        </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="section timeline-section">
-        <div class="container">
-            <div class="timeline">
-
-                <div class="timeline-item">
-                    <div class="tl-connector">
-                        <div class="tl-dot">01</div>
-                        <div class="tl-line"></div>
-                    </div>
-                    <div class="tl-card glass-card">
-                        <div class="tl-icon">💬</div>
-                        <h3>Consult</h3>
-                        <p class="tl-time">Week 1</p>
-                        <p>We kick off with a free 30-minute strategy call to understand your business, goals, and
-                            current bottlenecks. Then we map out the exact systems you need — nothing more, nothing
-                            less.</p>
-                        <ul class="tl-list">
-                            <li>Business audit and gap analysis</li>
-                            <li>Goal-setting and KPIs</li>
-                            <li>Custom roadmap and proposal</li>
-                            <li>Pricing and timeline confirmation</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="tl-connector">
-                        <div class="tl-dot">02</div>
-                        <div class="tl-line"></div>
-                    </div>
-                    <div class="tl-card glass-card">
-                        <div class="tl-icon">⚙️</div>
-                        <h3>Build</h3>
-                        <p class="tl-time">Weeks 2–4</p>
-                        <p>Our team gets to work building your systems. You'll receive regular updates and preview links
-                            throughout the build phase. We don't disappear — we keep you informed every step of the way.
-                        </p>
-                        <ul class="tl-list">
-                            <li>UI/UX design mockups for approval</li>
-                            <li>Development and AI training</li>
-                            <li>Integrations with your existing tools</li>
-                            <li>Internal testing and QA</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="tl-connector">
-                        <div class="tl-dot">03</div>
-                        <div class="tl-line last"></div>
-                    </div>
-                    <div class="tl-card glass-card">
-                        <div class="tl-icon">🚀</div>
-                        <h3>Launch</h3>
-                        <p class="tl-time">Week 4+</p>
-                        <p>We deploy your systems and stay hands-on through launch. You'll get a full walkthrough,
-                            documentation, and ongoing support. This isn't a handoff — it's a partnership.</p>
-                        <ul class="tl-list">
-                            <li>Live deployment and monitoring</li>
-                            <li>Team onboarding and training</li>
-                            <li>Performance tracking setup</li>
-                            <li>Ongoing optimization and support</li>
-                        </ul>
-                    </div>
-                </div>
-
+        <div class="timeline-item">
+          <div class="tl-connector">
+            <div class="tl-dot">02</div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <div class="tl-icon">
+                <svg viewBox="0 0 256 256"><path d="M232,96l-33.43,32.17a80,80,0,1,1-22.15-69.81" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M152,104V40h64" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="tl-time">Weeks 2–4</span>
             </div>
+            <h3>Build</h3>
+            <p>Our team gets to work building your systems. You'll receive regular updates and preview links throughout the build phase. We don't disappear — we keep you informed every step of the way.</p>
+            <ul class="tl-list">
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> UI/UX design mockups for approval</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Development and AI training</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Integrations with your existing tools</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Internal testing and QA</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <!-- WHY US -->
-    <section class="section why-section">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Why Choose Us</p>
-                <h2 class="section-title">We're Not an Agency.<br /><span class="grad-text">We're Your Tech Team.</span>
-                </h2>
-                <p class="section-sub">Most agencies build and walk away. We stay with you — monitoring, optimizing, and
-                    evolving your systems as your business grows.</p>
+        <div class="timeline-item">
+          <div class="tl-connector">
+            <div class="tl-dot">03</div>
+            <div class="tl-line last"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-card-header">
+              <div class="tl-icon">
+                <svg viewBox="0 0 256 256"><path d="M94.11,36.22a8,8,0,0,1,5.57-9.81,104,104,0,0,1,57.54,1.37,8,8,0,0,1,4.76,10.15L128,128Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M128,128,61.24,193a8,8,0,0,1-11.85-.81,104,104,0,0,1-19-53.9,8,8,0,0,1,8.54-8.57Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M128,128l73.37,62.68a8,8,0,0,1,1.27,11,104,104,0,0,1-39.56,30.89,8,8,0,0,1-10.68-4.24Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <span class="tl-time">Week 4+</span>
             </div>
-            <div class="why-grid">
-                <div class="glass-card why-card">
-                    <div class="why-icon">⚡</div>
-                    <h3>Fast Delivery</h3>
-                    <p>Most projects delivered in 2–4 weeks. No endless back-and-forths or scope bloat.</p>
-                </div>
-                <div class="glass-card why-card">
-                    <div class="why-icon">🎯</div>
-                    <h3>Results-Focused</h3>
-                    <p>We measure success the same way you do: leads, revenue, and ROI — not vanity metrics.</p>
-                </div>
-                <div class="glass-card why-card">
-                    <div class="why-icon">🔒</div>
-                    <h3>Full Ownership</h3>
-                    <p>Everything we build is 100% yours. No lock-in, no hostage situations.</p>
-                </div>
-                <div class="glass-card why-card">
-                    <div class="why-icon">🤝</div>
-                    <h3>Ongoing Partnership</h3>
-                    <p>We stay on to monitor, optimize, and expand your systems as you scale.</p>
-                </div>
-            </div>
+            <h3>Launch</h3>
+            <p>We deploy your systems and stay hands-on through launch. You'll get a full walkthrough, documentation, and ongoing support. This isn't a handoff — it's a partnership.</p>
+            <ul class="tl-list">
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Live deployment and monitoring</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Team onboarding and training</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Performance tracking setup</li>
+              <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z" fill="#457B9D"/></svg> Ongoing optimization and support</li>
+            </ul>
+          </div>
         </div>
-    </section>
 
-    <section class="cta-banner">
-        <div class="cta-bg-glow"></div>
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Book your free strategy call and we'll build your roadmap in 30 minutes.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Book Free Strategy Call →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section why-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Why Choose Us</p>
+        <h2 class="section-title">We're Not an Agency.<br />We're Your Tech Team.</h2>
+        <p class="section-sub">Most agencies build and walk away. We stay with you — monitoring, optimizing, and evolving your systems as your business grows.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 256 256"><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Fast Delivery</h3>
+          <p>Most projects delivered in 2–4 weeks. No endless back-and-forths or scope bloat.</p>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"> <a href="index.html" class="nav-logo">
-                        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-                    </a>
-                    <p>Your business, fully equipped.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#ai-agents">AI Agents</a></li>
-                        <li><a href="services.html#websites">Websites</a></li>
-                        <li><a href="services.html#social-media">Social Media</a></li>
-                        <li><a href="services.html#ads">Ad Campaigns</a></li>
-                        <li><a href="services.html#phone-systems">Phone Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Get In Touch</h4>
-                    <p>📧 hello@technicalcreations.com</p>
-                    <p>📞 (555) 000-0000</p>
-                    <div class="social-links"><a href="#" class="social-btn">in</a><a href="#"
-                            class="social-btn">𝕏</a><a href="#" class="social-btn">ig</a></div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Technical Creations LLC. All rights reserved.</p>
-            </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 256 256"><polyline points="224 208 32 208 32 48" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><polyline points="224 96 160 152 96 120 32 176" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Results-Focused</h3>
+          <p>We measure success the same way you do: leads, revenue, and ROI — not vanity metrics.</p>
         </div>
-    </footer>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 256 256"><path d="M40,114.79V56a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8v58.77c0,84.18-71.31,112.07-84.56,116.44a7.85,7.85,0,0,1-5.88,0C112.31,226.86,40,198.97,40,114.79Z" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><polyline points="172 104 113.33 160 84 132" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Full Ownership</h3>
+          <p>Everything we build is 100% yours. No lock-in, no hostage situations.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><svg viewBox="0 0 256 256"><path d="M128,96v72" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M96,168v-8a32,32,0,0,0-32-32h0a32,32,0,0,0-32,32v0a32,32,0,0,0,32,32H192a32,32,0,0,0,32-32v0a32,32,0,0,0-32-32h0a32,32,0,0,0-32,32v8" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M88,96a40,40,0,0,1,80,0" fill="none" stroke="#1D3557" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Ongoing Partnership</h3>
+          <p>We stay on to monitor, optimize, and expand your systems as you scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/global.js"></script>
+  <!-- TOOLS TICKER -->
+  <section class="tools-section">
+    <div class="container">
+      <h2>Built with proven tools.</h2>
+    </div>
+    <div class="ticker-strip">
+      <span class="tool-pill">n8n</span>
+      <span class="tool-pill">Flowise</span>
+      <span class="tool-pill">VAPI</span>
+      <span class="tool-pill">Twilio</span>
+      <span class="tool-pill">Vercel</span>
+      <span class="tool-pill">Supabase</span>
+      <span class="tool-pill">Claude API</span>
+      <span class="tool-pill">GoHighLevel</span>
+      <span class="tool-pill">Google Ads</span>
+      <span class="tool-pill">Meta Ads</span>
+      <span class="tool-pill">HubSpot</span>
+      <!-- duplicate for seamless loop -->
+      <span class="tool-pill">n8n</span>
+      <span class="tool-pill">Flowise</span>
+      <span class="tool-pill">VAPI</span>
+      <span class="tool-pill">Twilio</span>
+      <span class="tool-pill">Vercel</span>
+      <span class="tool-pill">Supabase</span>
+      <span class="tool-pill">Claude API</span>
+      <span class="tool-pill">GoHighLevel</span>
+      <span class="tool-pill">Google Ads</span>
+      <span class="tool-pill">Meta Ads</span>
+      <span class="tool-pill">HubSpot</span>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Book your free strategy call and we'll build your roadmap in 30 minutes.</p>
+      <a href="contact.html" class="btn btn-light btn-large">Book Free Strategy Call</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a><p>Your business, fully equipped.</p></div>
+        <div class="footer-links"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html#ai-agents">AI &amp; Automation</a></li><li><a href="services.html#websites">Websites</a></li><li><a href="services.html#voice">Voice Systems</a></li><li><a href="services.html#reputation">Reputation</a></li><li><a href="services.html#marketing">Marketing &amp; Ads</a></li><li><a href="services.html#content">Content</a></li><li><a href="services.html#data">Data &amp; Reporting</a></li><li><a href="services.html#social">Social Media</a></li></ul></div>
+        <div class="footer-contact"><h4>Get In Touch</h4><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/><polyline points="224 96 128 160 32 96" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> hello@technicalcreations.com</p><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> (555) 000-0000</p><div class="social-links"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">X</a><a href="#" class="social-btn">ig</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Technical Creations LLC. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
 </body>
 
 </html>

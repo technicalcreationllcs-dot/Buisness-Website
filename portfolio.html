@@ -2,203 +2,190 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio – Technical Creations LLC</title>
-    <meta name="description"
-        content="Real results for real businesses. See how Technical Creations LLC has helped clients grow with AI, web, and automation." />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/portfolio.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- Three.js and GSAP for Intro -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Technical Creations LLC</title>
+  <meta name="description" content="Real results for real businesses. See how Technical Creations LLC has helped clients grow with AI, web, and automation." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- 3D BAGEL INTRO -->
-    <div id="intro-container">
-        <div id="intro-instruction">Click the Bagel to Enter</div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+        <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </nav>
 
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger"
-                aria-label="Toggle menu"><span></span><span></span><span></span></button>
-        </div>
-    </nav>
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-tag">Case Studies</p>
+      <h1>Real Businesses.<br /><span class="grad-text">Real Results.</span></h1>
+      <p>Every project is measured in dollars earned, hours saved, and businesses changed.</p>
+    </div>
+  </section>
 
-    <section class="page-hero">
-        <div class="container">
-            <p class="section-tag">Case Studies</p>
-            <h1>Real Businesses.<br /><span class="grad-text">Real Results.</span></h1>
-            <p>Every project we take on is measured in dollars earned, hours saved, and businesses transformed.</p>
-        </div>
-    </section>
+  <!-- STATS ROW -->
+  <section class="stats-strip">
+    <div class="container">
+      <div class="strip-stats">
+        <div class="strip-stat"><span class="s-num" data-countup>50+</span><span class="s-label">Projects Completed</span></div>
+        <div class="strip-div"></div>
+        <div class="strip-stat"><span class="s-num" data-countup>3.2x</span><span class="s-label">Average ROI</span></div>
+        <div class="strip-div"></div>
+        <div class="strip-stat"><span class="s-num" data-countup>$2M+</span><span class="s-label">Revenue Generated</span></div>
+        <div class="strip-div"></div>
+        <div class="strip-stat"><span class="s-num" data-countup>98%</span><span class="s-label">Client Satisfaction</span></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- STATS ROW -->
-    <section class="stats-strip">
-        <div class="container">
-            <div class="strip-stats">
-                <div class="strip-stat"><span class="s-num grad-text">50+</span><span class="s-label">Projects
-                        Completed</span></div>
-                <div class="strip-div"></div>
-                <div class="strip-stat"><span class="s-num grad-text">3.2x</span><span class="s-label">Average
-                        ROI</span></div>
-                <div class="strip-div"></div>
-                <div class="strip-stat"><span class="s-num grad-text">$2M+</span><span class="s-label">Revenue
-                        Generated</span></div>
-                <div class="strip-div"></div>
-                <div class="strip-stat"><span class="s-num grad-text">98%</span><span class="s-label">Client
-                        Satisfaction</span></div>
+  <!-- FILTER BAR -->
+  <section class="filter-bar">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI Agent</button>
+        <button class="filter-btn" data-filter="web">Website &amp; Ads</button>
+        <button class="filter-btn" data-filter="phone">Phone System</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="section case-studies">
+    <div class="container">
+      <div class="case-grid" id="caseGrid">
+
+        <div class="case-card" data-category="ai">
+          <div class="case-tag">AI Agent</div>
+          <div class="case-visual cs-ai">
+            <div class="cs-graphic"><svg viewBox="0 0 256 256"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Z"/></svg></div>
+            <div class="cs-metric"><span class="cs-big">80%</span><span class="cs-label">Ticket Automation</span></div>
+          </div>
+          <div class="case-body">
+            <h3>E-Commerce Brand Cuts Support Costs by 60%</h3>
+            <p>A fast-growing online retailer was drowning in customer support tickets. We deployed a custom AI agent trained on their product catalog and policies — now it handles 80% of all inquiries automatically.</p>
+            <div class="case-results">
+              <div class="result-pill">60% Lower Support Costs</div>
+              <div class="result-pill">40hrs Saved/Week</div>
+              <div class="result-pill">4.9 CSAT Score</div>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- CASE STUDIES -->
-    <section class="section case-studies">
-        <div class="container">
-            <div class="case-grid">
-
-                <div class="case-card glass-card">
-                    <div class="case-tag">AI Agent</div>
-                    <div class="case-visual cs-ai">
-                        <div class="cs-graphic">🤖</div>
-                        <div class="cs-metric"><span class="cs-big">80%</span><span class="cs-label">Ticket
-                                Automation</span></div>
-                    </div>
-                    <h3>E-Commerce Brand Cuts Support Costs by 60%</h3>
-                    <p>A fast-growing online retailer was drowning in customer support tickets. We deployed a custom AI
-                        agent trained on their product catalog and policies — now it handles 80% of all inquiries
-                        automatically.</p>
-                    <div class="case-results">
-                        <div class="result-pill">↓ 60% Support Costs</div>
-                        <div class="result-pill">↑ 40hrs Saved/Week</div>
-                        <div class="result-pill">⭐ 4.9★ CSAT Score</div>
-                    </div>
-                </div>
-
-                <div class="case-card glass-card">
-                    <div class="case-tag">Website + Ads</div>
-                    <div class="case-visual cs-web">
-                        <div class="cs-graphic">🌐</div>
-                        <div class="cs-metric"><span class="cs-big">3x</span><span class="cs-label">Conversion
-                                Rate</span></div>
-                    </div>
-                    <h3>Real Estate Agent Triples Lead Flow in 30 Days</h3>
-                    <p>A solo real estate agent had an outdated website converting at under 1%. We rebuilt her site and
-                        launched a targeted Google Ads campaign — leads tripled within the first month.</p>
-                    <div class="case-results">
-                        <div class="result-pill">↑ 3x Conversions</div>
-                        <div class="result-pill">↓ 65% Cost Per Lead</div>
-                        <div class="result-pill">🏆 #1 Google for Zip Code</div>
-                    </div>
-                </div>
-
-                <div class="case-card glass-card">
-                    <div class="case-tag">Phone System</div>
-                    <div class="case-visual cs-phone">
-                        <div class="cs-graphic">📞</div>
-                        <div class="cs-metric"><span class="cs-big">0%</span><span class="cs-label">Missed Calls</span>
-                        </div>
-                    </div>
-                    <h3>HVAC Company Never Misses a Lead Again</h3>
-                    <p>A local HVAC business was losing jobs to missed calls after hours. We installed an AI phone
-                        system that answers, qualifies, and books appointments 24/7 — even on weekends and holidays.</p>
-                    <div class="case-results">
-                        <div class="result-pill">↑ 28 More Jobs/Month</div>
-                        <div class="result-pill">↑ $42K Added Revenue</div>
-                        <div class="result-pill">📅 Auto-Booking Active 24/7</div>
-                    </div>
-                </div>
-
-                <div class="case-card glass-card">
-                    <div class="case-tag">Social Media</div>
-                    <div class="case-visual cs-social">
-                        <div class="cs-graphic">📱</div>
-                        <div class="cs-metric"><span class="cs-big">12k</span><span class="cs-label">New
-                                Followers</span></div>
-                    </div>
-                    <h3>Restaurant Chain Grows to 12K Followers in 90 Days</h3>
-                    <p>A regional restaurant group had almost no social presence. We built a full content system —
-                        branded posts, reels, and stories — that grew their audience by 12,000 in just 3 months.</p>
-                    <div class="case-results">
-                        <div class="result-pill">+12K Followers (90 days)</div>
-                        <div class="result-pill">↑ 340% Engagement</div>
-                        <div class="result-pill">🍽️ 200+ Online Reservations</div>
-                    </div>
-                </div>
-
+        <div class="case-card" data-category="web">
+          <div class="case-tag">Website + Ads</div>
+          <div class="case-visual cs-web">
+            <div class="cs-graphic"><svg viewBox="0 0 256 256"><circle cx="128" cy="128" r="96" fill="#fff"/></svg></div>
+            <div class="cs-metric"><span class="cs-big">3x</span><span class="cs-label">Conversion Rate</span></div>
+          </div>
+          <div class="case-body">
+            <h3>Real Estate Agent Triples Lead Flow in 30 Days</h3>
+            <p>A solo real estate agent had an outdated website converting at under 1%. We rebuilt her site and launched a targeted Google Ads campaign — leads tripled within the first month.</p>
+            <div class="case-results">
+              <div class="result-pill">3x Conversions</div>
+              <div class="result-pill">65% Lower CPL</div>
+              <div class="result-pill">#1 Google for Zip</div>
             </div>
+          </div>
         </div>
-    </section>
 
-    <section class="cta-banner">
-        <div class="cta-bg-glow"></div>
-        <div class="container">
-            <h2>Want Results Like These?</h2>
-            <p>Book a free strategy call and we'll build a plan specifically for your business.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Book a Free Call →</a>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"> <a href="index.html" class="nav-logo">
-                        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-                    </a>
-                    <p>Your business, fully equipped.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="services.html#ai-agents">AI Agents</a></li>
-                        <li><a href="services.html#websites">Websites</a></li>
-                        <li><a href="services.html#social-media">Social Media</a></li>
-                        <li><a href="services.html#ads">Ad Campaigns</a></li>
-                        <li><a href="services.html#phone-systems">Phone Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Get In Touch</h4>
-                    <p>📧 hello@technicalcreations.com</p>
-                    <p>📞 (555) 000-0000</p>
-                    <div class="social-links"><a href="#" class="social-btn">in</a><a href="#"
-                            class="social-btn">𝕏</a><a href="#" class="social-btn">ig</a></div>
-                </div>
+        <div class="case-card" data-category="phone">
+          <div class="case-tag">Phone System</div>
+          <div class="case-visual cs-phone">
+            <div class="cs-graphic"><svg viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z" fill="#fff"/></svg></div>
+            <div class="cs-metric"><span class="cs-big">0%</span><span class="cs-label">Missed Calls</span></div>
+          </div>
+          <div class="case-body">
+            <h3>HVAC Company Never Misses a Lead Again</h3>
+            <p>A local HVAC business was losing jobs to missed calls after hours. We installed an AI phone system that answers, qualifies, and books appointments 24/7 — even on weekends and holidays.</p>
+            <div class="case-results">
+              <div class="result-pill">+28 Jobs/Month</div>
+              <div class="result-pill">$42K Added Revenue</div>
+              <div class="result-pill">24/7 Auto-Booking</div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2025 Technical Creations LLC. All rights reserved.</p>
-            </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="js/global.js"></script>
+        <div class="case-card" data-category="social">
+          <div class="case-tag">Social Media</div>
+          <div class="case-visual cs-social">
+            <div class="cs-graphic"><svg viewBox="0 0 256 256"><rect x="24" y="64" width="208" height="128" rx="16" fill="#fff"/></svg></div>
+            <div class="cs-metric"><span class="cs-big">12k</span><span class="cs-label">New Followers</span></div>
+          </div>
+          <div class="case-body">
+            <h3>Restaurant Chain Grows to 12K Followers in 90 Days</h3>
+            <p>A regional restaurant group had almost no social presence. We built a full content system — branded posts, reels, and stories — that grew their audience by 12,000 in just 3 months.</p>
+            <div class="case-results">
+              <div class="result-pill">+12K Followers</div>
+              <div class="result-pill">340% Engagement</div>
+              <div class="result-pill">200+ Reservations</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Want Results Like These?</h2>
+      <p>Book a free strategy call and we'll build a plan specifically for your business.</p>
+      <a href="contact.html" class="btn btn-light btn-large">Book a Free Call</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a><p>Your business, fully equipped.</p></div>
+        <div class="footer-links"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-links"><h4>Services</h4><ul><li><a href="services.html#ai-agents">AI &amp; Automation</a></li><li><a href="services.html#websites">Websites</a></li><li><a href="services.html#voice">Voice Systems</a></li><li><a href="services.html#reputation">Reputation</a></li><li><a href="services.html#marketing">Marketing &amp; Ads</a></li><li><a href="services.html#content">Content</a></li><li><a href="services.html#data">Data &amp; Reporting</a></li><li><a href="services.html#social">Social Media</a></li></ul></div>
+        <div class="footer-contact"><h4>Get In Touch</h4><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/><polyline points="224 96 128 160 32 96" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> hello@technicalcreations.com</p><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> (555) 000-0000</p><div class="social-links"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">X</a><a href="#" class="social-btn">ig</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Technical Creations LLC. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script>
+    // Portfolio filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.case-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+            card.style.position = '';
+            card.style.visibility = '';
+          } else {
+            card.classList.add('hidden');
+            setTimeout(() => {
+              if (card.classList.contains('hidden')) {
+                card.style.position = 'absolute';
+                card.style.visibility = 'hidden';
+              }
+            }, 200);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

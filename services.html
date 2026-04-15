@@ -2,230 +2,395 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services – Technical Creations LLC</title>
-    <meta name="description"
-        content="AI agents, custom websites, social media systems, ad campaigns, and phone automation built for businesses that want to scale." />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/services.css" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap"
-        rel="stylesheet" />
-    <!-- Three.js and GSAP for Intro -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Technical Creations LLC</title>
+  <meta name="description"
+    content="AI agents, websites, phone systems, reputation management, marketing, content creation, and more. Full-stack digital infrastructure for businesses that want to scale." />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- 3D BAGEL INTRO -->
-    <div id="intro-container">
-        <div id="intro-instruction">Click the Bagel to Enter</div>
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link active">Services</a></li>
+        <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- NAV -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">
-                <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="services.html" class="nav-link active">Services</a></li>
-                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                <li><a href="contact.html" class="nav-link cta-link">Book a Call</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-tag">What We Offer</p>
+      <h1>Full-Stack Digital<br /><span class="grad-text">Infrastructure</span></h1>
+      <p>Every service we offer is engineered to automate, convert, and scale your business — not just look good.</p>
+    </div>
+  </section>
+
+  <!-- ─── SERVICE NAV STRIP ───────────────── -->
+  <section class="service-nav-strip">
+    <div class="container">
+      <div class="svc-nav-scroll">
+        <a href="#ai-agents" class="svc-nav-link active">AI &amp; Automation</a>
+        <a href="#websites" class="svc-nav-link">Websites</a>
+        <a href="#voice" class="svc-nav-link">Voice Systems</a>
+        <a href="#reputation" class="svc-nav-link">Reputation</a>
+        <a href="#marketing" class="svc-nav-link">Marketing</a>
+        <a href="#content" class="svc-nav-link">Content</a>
+        <a href="#data" class="svc-nav-link">Data &amp; Reporting</a>
+        <a href="#social" class="svc-nav-link">Social Media</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  1. AI AGENTS & AUTOMATION                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section" id="ai-agents">
+    <div class="container">
+      <div class="svc-block">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor Robot -->
+            <svg viewBox="0 0 256 256"><path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16ZM180,116a12,12,0,1,1-12-12A12,12,0,0,1,180,116Zm-72,0a12,12,0,1,1-12-12A12,12,0,0,1,108,116Zm2,34.68a40,40,0,0,0,36,0,8,8,0,1,1,7.23,14.24,55.63,55.63,0,0,1-50.46,0A8,8,0,1,1,110,150.68Z"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">24/7 Operation</div>
+            <div class="svc-pill">Multi-Channel</div>
+            <div class="svc-pill">CRM Integrated</div>
+          </div>
         </div>
-    </nav>
-
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="container">
-            <p class="section-tag">What We Offer</p>
-            <h1>Full-Stack Digital<br /><span class="grad-text">Infrastructure</span></h1>
-            <p>Every service we offer is engineered to automate, convert, and scale your business — not just look good.
-            </p>
+        <div class="svc-content">
+          <div class="svc-tag">Service 01</div>
+          <h2 class="svc-title">AI Agents &amp; <span class="grad-text">Automation</span></h2>
+          <p class="svc-desc">Custom-trained AI that handles your customer service, qualifies leads, books appointments, and automates every repetitive task that drains your team — 24 hours a day, 7 days a week.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI chatbots &amp; lead capture bots</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI phone answering &amp; appointment booking</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI receptionist for multi-location businesses</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI-powered FAQ systems</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI proposal &amp; quote generators</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI employee onboarding assistants</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Automated lead scoring</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Contract &amp; document automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Inventory alert automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Workflow automation (follow-ups, invoicing, reminders)</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI follow-up sequences (SMS + email combined)</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Missed call text-back</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Get an AI Agent</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- AI AGENTS -->
-    <section class="section service-section" id="ai-agents">
-        <div class="container">
-            <div class="svc-block">
-                <div class="svc-icon-wrap">🤖</div>
-                <div class="svc-content">
-                    <div class="svc-tag">Service 01</div>
-                    <h2 class="svc-title">AI <span class="grad-text">Agents</span></h2>
-                    <p class="svc-desc">We build custom-trained AI agents that handle the repetitive, time-consuming
-                        tasks that drain your team's energy. From customer service to lead qualification, our agents
-                        work 24/7 without a paycheck.</p>
-                    <ul class="svc-features">
-                        <li>✦ Conversational customer support bots</li>
-                        <li>✦ Automated lead qualification & follow-up</li>
-                        <li>✦ CRM integration and data entry automation</li>
-                        <li>✦ Custom-trained on your business knowledge base</li>
-                        <li>✦ Multi-channel: website, email, SMS, WhatsApp</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Get an AI Agent →</a>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  2. WEBSITES & DIGITAL PRESENCE             -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section alt-bg" id="websites">
+    <div class="container">
+      <div class="svc-block reverse">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor Globe -->
+            <svg viewBox="0 0 256 256"><circle cx="128" cy="128" r="96" fill="none" stroke="#1D3557" stroke-width="12"/><path d="M88,128c0,37.46,13.33,70.92,34.28,93.49a7.77,7.77,0,0,0,11.44,0C154.67,198.92,168,165.46,168,128s-13.33-70.92-34.28-93.49a7.77,7.77,0,0,0-11.44,0C101.33,57.08,88,90.54,88,128Z" fill="none" stroke="#1D3557" stroke-width="12"/><line x1="32" y1="128" x2="224" y2="128" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">SEO-Optimized</div>
+            <div class="svc-pill">Mobile-First</div>
+            <div class="svc-pill">Conversion-Focused</div>
+          </div>
         </div>
-    </section>
-
-    <!-- WEBSITES -->
-    <section class="section service-section alt-bg" id="websites">
-        <div class="container">
-            <div class="svc-block reverse">
-                <div class="svc-icon-wrap">🌐</div>
-                <div class="svc-content">
-                    <div class="svc-tag">Service 02</div>
-                    <h2 class="svc-title">Custom <span class="grad-text">Websites</span></h2>
-                    <p class="svc-desc">Cookie-cutter templates don't win customers. We build conversion-optimized
-                        websites from scratch — designed to rank, load fast, and turn visitors into leads.</p>
-                    <ul class="svc-features">
-                        <li>✦ Full custom design (no templates)</li>
-                        <li>✦ SEO-optimized from day one</li>
-                        <li>✦ Blazing-fast performance (Core Web Vitals)</li>
-                        <li>✦ Conversion-focused layouts and CTAs</li>
-                        <li>✦ CMS integration for easy content updates</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Build My Website →</a>
-                </div>
-            </div>
+        <div class="svc-content">
+          <div class="svc-tag">Service 02</div>
+          <h2 class="svc-title">Websites &amp; <span class="grad-text">Digital Presence</span></h2>
+          <p class="svc-desc">Cookie-cutter templates don't win customers. We build conversion-optimized websites and establish your digital footprint across every platform that matters.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Website design &amp; development</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Website hosting &amp; maintenance retainer</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Google Business Profile optimization</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Google Maps placement &amp; optimization</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Citation building &amp; local directory listings</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Local SEO</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Build My Website</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- SOCIAL MEDIA -->
-    <section class="section service-section" id="social-media">
-        <div class="container">
-            <div class="svc-block">
-                <div class="svc-icon-wrap">📱</div>
-                <div class="svc-content">
-                    <div class="svc-tag">Service 03</div>
-                    <h2 class="svc-title">Social Media <span class="grad-text">Systems</span></h2>
-                    <p class="svc-desc">We don't just post content — we build an automated social media engine that
-                        keeps your brand active, grows your audience, and drives traffic without you lifting a finger.
-                    </p>
-                    <ul class="svc-features">
-                        <li>✦ Content strategy and calendar planning</li>
-                        <li>✦ Automated publishing across all platforms</li>
-                        <li>✦ Branded graphics and short-form video</li>
-                        <li>✦ Engagement automation and community management</li>
-                        <li>✦ Analytics and monthly performance reports</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Automate My Social →</a>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  3. VOICE & COMMUNICATION SYSTEMS           -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section" id="voice">
+    <div class="container">
+      <div class="svc-block">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor Phone -->
+            <svg viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">AI Voice</div>
+            <div class="svc-pill">Smart Routing</div>
+            <div class="svc-pill">Call Tracking</div>
+          </div>
         </div>
-    </section>
-
-    <!-- ADS -->
-    <section class="section service-section alt-bg" id="ads">
-        <div class="container">
-            <div class="svc-block reverse">
-                <div class="svc-icon-wrap">🎯</div>
-                <div class="svc-content">
-                    <div class="svc-tag">Service 04</div>
-                    <h2 class="svc-title">Ad <span class="grad-text">Campaigns</span></h2>
-                    <p class="svc-desc">We run paid advertising that actually makes money. Our data-driven approach
-                        ensures every dollar you spend is working toward acquiring customers at the lowest cost
-                        possible.</p>
-                    <ul class="svc-features">
-                        <li>✦ Google Search & Display ads</li>
-                        <li>✦ Meta (Facebook & Instagram) ads</li>
-                        <li>✦ Full campaign setup, creative, and copywriting</li>
-                        <li>✦ A/B testing and continuous optimization</li>
-                        <li>✦ Weekly ROAS reporting and strategy calls</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Run My Ads →</a>
-                </div>
-            </div>
+        <div class="svc-content">
+          <div class="svc-tag">Service 03</div>
+          <h2 class="svc-title">Voice &amp; <span class="grad-text">Communication</span></h2>
+          <p class="svc-desc">Never miss a lead again. We build AI-powered phone systems and communication infrastructure that answers, routes, follows up, and books — automatically, around the clock.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI phone answering &amp; call routing</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> IVR phone tree setup</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Two-way SMS marketing systems</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Ringless voicemail drops</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Call tracking and recording summaries</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Set Up My Phone System</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- PHONE SYSTEMS -->
-    <section class="section service-section" id="phone-systems">
-        <div class="container">
-            <div class="svc-block">
-                <div class="svc-icon-wrap">📞</div>
-                <div class="svc-content">
-                    <div class="svc-tag">Service 05</div>
-                    <h2 class="svc-title">Phone <span class="grad-text">Systems</span></h2>
-                    <p class="svc-desc">Never miss a lead again. We build AI-powered phone automation systems that
-                        handle inbound calls, route intelligently, and follow up automatically — 24 hours a day.</p>
-                    <ul class="svc-features">
-                        <li>✦ AI voice receptionist and IVR systems</li>
-                        <li>✦ Intelligent call routing and screening</li>
-                        <li>✦ Voicemail transcription and auto-response</li>
-                        <li>✦ Appointment booking via phone</li>
-                        <li>✦ CRM sync for every call interaction</li>
-                    </ul>
-                    <a href="contact.html" class="btn btn-primary">Set Up My Phone System →</a>
-                </div>
-            </div>
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  4. REPUTATION MANAGEMENT                   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section alt-bg" id="reputation">
+    <div class="container">
+      <div class="svc-block reverse">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor Star -->
+            <svg viewBox="0 0 256 256"><path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,91l59.46-5.15,23.21-55.36a16.4,16.4,0,0,1,29.5,0L166.46,85.84,225.92,91a16.46,16.46,0,0,1,8.37,23.85Z" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">AI Responses</div>
+            <div class="svc-pill">5-Star System</div>
+            <div class="svc-pill">Live Dashboard</div>
+          </div>
         </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-banner">
-        <div class="cta-bg-glow"></div>
-        <div class="container">
-            <h2>Not Sure Where to Start?</h2>
-            <p>Book a free 30-minute call and we'll tell you exactly what your business needs.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Book a Free Call →</a>
+        <div class="svc-content">
+          <div class="svc-tag">Service 04</div>
+          <h2 class="svc-title">Reputation <span class="grad-text">Management</span></h2>
+          <p class="svc-desc">Your online reputation is your storefront. We build systems that generate 5-star reviews automatically, respond intelligently with AI, and give you a real-time dashboard so you always know where you stand.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI review response automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Review generation campaigns</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Reputation monitoring dashboards</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Manage My Reputation</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="nav-logo">
-                        <img src="images/logo.png" alt="Technical Creations LLC" class="logo-img">
-                    </a>
-                    <p>Your business, fully equipped.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#ai-agents">AI Agents</a></li>
-                        <li><a href="#websites">Websites</a></li>
-                        <li><a href="#social-media">Social Media</a></li>
-                        <li><a href="#ads">Ad Campaigns</a></li>
-                        <li><a href="#phone-systems">Phone Systems</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Get In Touch</h4>
-                    <p>📧 hello@technicalcreations.com</p>
-                    <p>📞 (555) 000-0000</p>
-                    <div class="social-links"><a href="#" class="social-btn">in</a><a href="#"
-                            class="social-btn">𝕏</a><a href="#" class="social-btn">ig</a></div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Technical Creations LLC. All rights reserved.</p>
-            </div>
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  5. MARKETING & ADVERTISING                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section" id="marketing">
+    <div class="container">
+      <div class="svc-block">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor Target -->
+            <svg viewBox="0 0 256 256"><circle cx="128" cy="128" r="96" fill="none" stroke="#1D3557" stroke-width="12"/><circle cx="128" cy="128" r="64" fill="none" stroke="#1D3557" stroke-width="12"/><circle cx="128" cy="128" r="32" fill="none" stroke="#1D3557" stroke-width="12"/><circle cx="128" cy="128" r="4" fill="#1D3557"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">Google + Meta</div>
+            <div class="svc-pill">Email Flows</div>
+            <div class="svc-pill">Cart Recovery</div>
+          </div>
         </div>
-    </footer>
+        <div class="svc-content">
+          <div class="svc-tag">Service 05</div>
+          <h2 class="svc-title">Marketing &amp; <span class="grad-text">Advertising</span></h2>
+          <p class="svc-desc">Data-driven ad campaigns, email marketing, and automated sales sequences that maximize every dollar you spend. We don't just run ads — we build a revenue engine.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Google &amp; Meta ad campaigns</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Email marketing automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Abandoned cart automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Post-purchase follow-up sequences</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Upsell &amp; cross-sell email flows</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Automated social posting &amp; scheduling</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Run My Ads</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/global.js"></script>
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  6. CONTENT CREATION                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section alt-bg" id="content">
+    <div class="container">
+      <div class="svc-block reverse">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor PencilLine -->
+            <svg viewBox="0 0 256 256"><path d="M92.69,216H48a8,8,0,0,1-8-8V163.31a8,8,0,0,1,2.34-5.65L165.66,34.34a8,8,0,0,1,11.31,0L221.66,79a8,8,0,0,1,0,11.31L98.34,213.66A8,8,0,0,1,92.69,216Z" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><line x1="136" y1="64" x2="192" y2="120" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><line x1="40" y1="216" x2="216" y2="216" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">AI-Powered</div>
+            <div class="svc-pill">SEO Blogs</div>
+            <div class="svc-pill">At Scale</div>
+          </div>
+        </div>
+        <div class="svc-content">
+          <div class="svc-tag">Service 06</div>
+          <h2 class="svc-title">Content <span class="grad-text">Creation</span></h2>
+          <p class="svc-desc">Consistent, high-quality content without the headache. We use AI and human editing to produce blogs, video scripts, product descriptions, and content calendars at scale.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI blog writing on retainer</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> AI video scripts</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Monthly content calendars</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Product description writing at scale</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Create My Content</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  7. DATA & REPORTING                        -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section" id="data">
+    <div class="container">
+      <div class="svc-block">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor ChartLineUp -->
+            <svg viewBox="0 0 256 256"><polyline points="224 208 32 208 32 48" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><polyline points="224 96 160 152 96 120 32 176" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">Auto Reports</div>
+            <div class="svc-pill">Analytics</div>
+            <div class="svc-pill">CRM Setup</div>
+          </div>
+        </div>
+        <div class="svc-content">
+          <div class="svc-tag">Service 07</div>
+          <h2 class="svc-title">Data &amp; <span class="grad-text">Reporting</span></h2>
+          <p class="svc-desc">If you can't measure it, you can't scale it. We set up automated reporting, analytics dashboards, and CRM systems so you always know what's working and what's not.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Automated weekly business reports</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Google Analytics dashboard setup</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Ad performance reporting automation</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> CRM setup and management</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Set Up My Reporting</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  8. SOCIAL MEDIA                            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="section service-section alt-bg" id="social">
+    <div class="container">
+      <div class="svc-block reverse">
+        <div class="svc-icon-panel">
+          <div class="svc-icon-main">
+            <!-- Phosphor Monitor -->
+            <svg viewBox="0 0 256 256"><rect x="24" y="64" width="208" height="128" rx="16" fill="none" stroke="#1D3557" stroke-width="12"/><line x1="164" y1="208" x2="92" y2="208" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round"/><line x1="128" y1="192" x2="128" y2="208" fill="none" stroke="#1D3557" stroke-width="12" stroke-linecap="round"/></svg>
+          </div>
+          <div class="svc-pills">
+            <div class="svc-pill">Auto-Publishing</div>
+            <div class="svc-pill">Content Calendar</div>
+            <div class="svc-pill">Full Management</div>
+          </div>
+        </div>
+        <div class="svc-content">
+          <div class="svc-tag">Service 08</div>
+          <h2 class="svc-title">Social <span class="grad-text">Media</span></h2>
+          <p class="svc-desc">We don't just post — we build an automated social engine that keeps your brand active, grows your audience, and drives traffic without you lifting a finger.</p>
+          <ul class="svc-features">
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Full social media management</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Monthly content calendars</li>
+            <li><svg viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"/></svg> Automated scheduling &amp; posting</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Automate My Social</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  TARGET CLIENTS STRIP                       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <section class="clients-strip">
+    <div class="container">
+      <p class="section-tag" style="color:rgba(255,255,255,0.5);">Who We Serve</p>
+      <h2>Built for Businesses That Want to Scale.</h2>
+      <div class="client-pills">
+        <span class="client-pill">HVAC / Plumbers / Electricians</span>
+        <span class="client-pill">Dentists / Med Spas / Chiropractors</span>
+        <span class="client-pill">Real Estate Agents</span>
+        <span class="client-pill">Restaurants</span>
+        <span class="client-pill">Law Firms</span>
+        <span class="client-pill">E-Commerce Stores</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Not Sure Where to Start?</h2>
+      <p>Book a free 15-minute call and we'll tell you exactly what your business needs.</p>
+      <a href="contact.html" class="btn btn-light btn-large">Book a Free Call</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Technical Creations LLC" class="logo-img"></a><p>Your business, fully equipped.</p></div>
+        <div class="footer-links"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="how-it-works.html">How It Works</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-links"><h4>Services</h4><ul><li><a href="#ai-agents">AI &amp; Automation</a></li><li><a href="#websites">Websites</a></li><li><a href="#voice">Voice Systems</a></li><li><a href="#reputation">Reputation</a></li><li><a href="#marketing">Marketing</a></li><li><a href="#content">Content</a></li><li><a href="#data">Data &amp; Reporting</a></li><li><a href="#social">Social Media</a></li></ul></div>
+        <div class="footer-contact"><h4>Get In Touch</h4><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><rect x="32" y="48" width="192" height="160" rx="8" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/><polyline points="224 96 128 160 32 96" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> hello@technicalcreations.com</p><p><svg width="16" height="16" viewBox="0 0 256 256" style="vertical-align:middle;margin-right:6px"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46Z" fill="none" stroke="rgba(255,255,255,0.65)" stroke-width="16"/></svg> (555) 000-0000</p><div class="social-links"><a href="#" class="social-btn">in</a><a href="#" class="social-btn">X</a><a href="#" class="social-btn">ig</a></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Technical Creations LLC. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="js/global.js"></script>
+  <script>
+    // Service nav highlighting on scroll
+    const svcNavLinks = document.querySelectorAll('.svc-nav-link');
+    const svcSections = document.querySelectorAll('.service-section');
+    if (svcNavLinks.length && svcSections.length) {
+      const svcObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            svcNavLinks.forEach(l => l.classList.remove('active'));
+            const id = entry.target.id;
+            const activeLink = document.querySelector(`.svc-nav-link[href="#${id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      }, { threshold: 0.3 });
+      svcSections.forEach(s => svcObserver.observe(s));
+    }
+  </script>
 </body>
 
 </html>
